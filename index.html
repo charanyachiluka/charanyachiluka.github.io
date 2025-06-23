@@ -1,187 +1,258 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charanya portfolio</title>
-</head>
-<style>
-    body {
-        background-color: rgb(2, 2, 45); 
-         
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charanya | Portfolio</title>
 
-        color: white;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
+  <style>
     * {
-        padding: 0;
-        margin: 0;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 50px;
-        background-color: rgb(8, 8, 74);
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #010842;
+      color: white;
+      line-height: 1.6;
     }
 
-    .left {
-        font-size: 1.5rem;
+    header {
+      padding: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background-color: #010842;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
-    nav ul li {
-        display: inline;
-        justify-content: center;
-        margin: 0 23px;
-        
-        
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
 
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    nav ul li a{
-        text-decoration: none;
-        color: white;
-    }
-    nav ul li a:hover{
-        color: rgb(129, 129, 232);
-        font-size: 1.3rem;
-    }
-    
 
-    .first {
-        display: flex;
-        justify-content: space-around;
-        margin: 80px;
-        
-        
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
 
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
     }
-    .first div{
-        width: 50%;
-    }
-    .leftsection {
-    font-size: 2.5rem;
-    width: 80%;
-    margin: 50px 0;
-        
-        
-    }
-    .rightsection img{
-        
-        width: 59%;
-        margin:50px 0;
-        
-    }
-    .p{
-        color: rgb(146, 81, 207);
-    }
-    #element{
-        color: rgb(146, 81, 207);
-    }
-    hr{
-        height: 2px;
-    }
-    .second{
-        height: 150px;
-        font-size: 1.5rem;
-        padding: 150px;
-        margin: 150px;
-         /* background-color: rgb(4, 52, 52); */
-        
-    }
-    .third
-    {   height: 150px;
-        padding: 150px;
-        margin: 150px;
-        /* background-color: aquamarine; */
-        display: flex;
-    }
-    .box{
-        height: 200px;
-        width: 220px;
-        border: 3px solid white;
-        padding: 20px;
-        margin: 10px;
-        border-radius: 20px;
 
-
+    nav a:hover, nav a.active {
+      color: #807b7b;
+      
     }
-   .box:hover{
-    box-shadow: 15px 12px 17px 12px slategrey;
-   }
-   #am{
-    color:rgb(255, 249, 249);
-    text-underline-position: auto;
-   }
-    
-</style>
 
+    .hero {
+      background: linear-gradient(120deg, #424b91 0%, #6a6766 100%);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .hero span {
+      font-weight: 600;
+    }
+
+    .section {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .project-card {
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+
+    button, .resume-button {
+      padding: 12px 20px;
+      background: #cdc0bd;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    button:hover, .resume-button:hover {
+      background: #000000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fafafa;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .social-icons {
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      color: #555;
+      margin: 0 10px;
+      font-size: 20px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #090807;
+    }
+  </style>
+</head>
 <body>
-    <header>
-        <nav>
-            <div class="left">
-                Charanya's Portfolio
-            </div>
-            <div class="right">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#project">project</a></li>
-                    
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#resume"></a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="first" id="home">
-            <div class="leftsection">Hi,My name is <span class="p">Charanya</span>
-            <div>i am a passionate</div>
-             
-            <span id="element"></span>
-            </div>
-            <div class="rightsection"><img src="a.png" alt=""></div>
-            <hr>
-        </section>
-            
-        <section class="second" id="about">
-            <div class="secondleft"></div> 
-            <div class="secondright">
-                <h1 id="am">ABOUT ME </h1>
-                <h6>
-                    I am a motivated and curious individual with a passion for learning and innovation. Currently pursuing my Bachelor's degree in Engineering, I have a strong interest in technology and its real-world applications. I enjoy exploring new concepts, solving problems, and continuously improving my skills.
+  <header>
+    <div class="container">
+      <h1>Charanya</h1>
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-I value  clarity, creativity, and continuous growth, and I strive to bring a positive and dedicated attitude to everything I do. My goal is to contribute meaningfully to any team or task I’m a part of, while always looking for opportunities to expand my knowledge and capabilities.</div>
-           
-                </h6>
- <p>Click the button below to download my resume:</p>
-            <a href="resume.pdf" download="C:\Users\Admin\Desktop\charanyachiluka.github.io-1\RESUME.pdf" class="download-button">Download My Resume</a>
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Hello, I'm <span>Charanya</span></h2>
+      <p>a passionate and detail-oriented web developer with a strong foundation in HTML, CSS, JavaScript, and modern design principles. I love crafting visually appealing, user-friendly websites that offer meaningful digital experiences. With a keen eye for design and a drive for clean, efficient code, I’m constantly learning new technologies to improve my skills. Whether it's building a responsive layout or integrating dynamic features, I enjoy turning ideas into interactive web applications that solve real-world problems.</p>
+    </div>
+  </section>
 
-            
-        </section>
-        <section class="third" id="project">
-            <div class="box"><b>PROJECT 1.online store </b>
-                <a href="https://charanyachiluka.github.io/online-store/">open</a>
-               
-            </div>
-            <div class="box"><b>PROJECT 2.mybank</b>
-                <a href=" https://charanyachiluka.github.io/mybank/">open</a>
-            </div>
-            <div class="box"><b>PROJECT 3</b></div>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I am passionate about building beautiful, user-friendly websites. With experience in HTML, CSS, JavaScript, and more, I aim to create engaging digital experiences.</p>
+      <a href="RESUME.pdf" class="resume-button" download>📄 Download My Resume</a>
+    </div>
+  </section>
 
-        </section>
-    </main>
-</body>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script>
-    var typed = new Typed('#element', {
-      strings: ['VIDEO EDITOR','WEB DEVELOPER'],
-      typeSpeed: 50,
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Project 1</h3>
+          <p>	<h5>E-Commerce Platform Development:</h5> Designed and developed a full-stack e-commerce platform using React and Node.js. Integrated a secure payment gateway and implemented user authentication. Optimized database queries, reducing page load time by 40%. (2024)</p>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p> <h5>Guided Eye(Ongoing):</h5>	 Developed a smart Android application designed to assist visually impaired individuals by integrating voice command recognition, object detection, text reading (OCR), and real-time navigation. Implemented ML Kit for text recognition and integrated Google Maps API for navigation guidance. Enabled hands-free interaction using voice commands to enhance user accessibility and independence. (2025)
+
+</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://github.com/charanyachiluka" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://instagram.com/cherry_._charms" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:charanyachiluka@example.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>&copy; 2025 Charanya. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Contact form alert
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for reaching out!');
+      this.reset();
+    });
+
+    // Active nav menu highlight
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      document.querySelectorAll("section").forEach((section) => {
+        const sectionTop = section.offsetTop - 60;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+          link.classList.add("active");
+        }
+      });
     });
   </script>
+</body>
 </html>
